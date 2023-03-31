@@ -1,0 +1,38 @@
+{
+    "kind": "Deployment",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "name": "deploy8",
+        "creationTimestamp": null,
+        "labels": {
+            "app": "deploy8"
+        }
+    },
+    "spec": {
+        "replicas": 1,
+        "selector": {
+            "matchLabels": {
+                "app": "deploy8"
+            }
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "app": "deploy8"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "name": "centos",
+                        "image": "centos",
+                        "resources": {}
+                    }
+                ]
+            }
+        },
+        "strategy": {}
+    },
+    "status": {}
+}
